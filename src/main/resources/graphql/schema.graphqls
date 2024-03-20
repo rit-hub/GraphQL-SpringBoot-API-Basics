@@ -1,0 +1,25 @@
+type Query {
+    hello: String
+    getAllStudents : [StudentData]
+}
+
+type Mutation {
+    saveStudent(student: Student): String
+}
+input Student {
+    id: ID
+    subjects: String
+    name: String
+}
+type StudentData {
+    id: ID
+    subjects: String
+    name: String
+}
+
+enum Subject {
+    ENG
+    HINDI
+    MATH
+    JAVA
+}
